@@ -6,8 +6,11 @@
   </head>
   <body>
     <div id="app">
-
-      {{ time }} <img :src="time.escudo">
+        <ul>
+            <li v-for="(time, index) in times">
+                {{ index +1 }} - {{ time.nome}} <img :src="time.escudo">
+            </li>
+        </ul>
     </div>
     <script src="/dist/build.js"></script>
   </body>
