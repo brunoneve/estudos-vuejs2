@@ -16,3 +16,11 @@ sudo apt-get install -y nodejs
 npm install -g vue-cli
 
 
+3 - Criar template exemplo
+
+vue init webpack-simple vue2
+
+
+4 - cd vue2/ -> Instalar dependencias
+
+npm install
