@@ -40,13 +40,15 @@
                 <div class="form-group">
                     <input type="text" class="form-control">
                     <label class="control-label">
-                        <img src="" style="height: 30px; width: 30px;">
+                        {{novoJogo.casa.time.nome}}
+                        <img :src="novoJogo.casa.time.escudo" style="height: 30px; width: 30px;">
                     </label>
                 </div>
                 <span>X</span>
                 <div class="form-group">
                     <label class="control-label">
-                        <img src="" style="height: 30px; width: 30px;">
+                        {{novoJogo.fora.time.nome}}
+                        <img :src="novoJogo.fora.time.escudo" style="height: 30px; width: 30px;">
                     </label>
                     <input type="text" class="form-control">
                 </div>
