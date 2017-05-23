@@ -26,9 +26,9 @@
                             <strong>{{time.nome}}</strong>
                         </td>
                         <td>{{time.pontos}}</td>
-                        <td>{{time.GM}}</td>
-                        <td>{{time.GS}}</td>
-                        <td>{{time.saldo}}</td>
+                        <td>{{time.gm}}</td>
+                        <td>{{time.gs}}</td>
+                        <td>{{time.gm - time.gs}}</td>
                     </tr>
 
                 </tbody>
@@ -52,7 +52,7 @@
                     </label>
                     <input type="text" class="form-control" v-model="novoJogo.fora.gols">
                 </div>
-                <button type="button" class="btn btn-primary">Fim de jogo</button>
+                <button type="button" class="btn btn-primary" @click="fimJogo">Fim de jogo</button>
             </form>
         </div>
 
