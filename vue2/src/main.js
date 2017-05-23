@@ -41,26 +41,29 @@ let myVue = new Vue({
                 time:null,
                 gols:0
             }
-        }
-    },
-    created(){
-        let indexCasa = Math.floor(Math.random() * 16),
-        indexFora = Math.floor(Math.random() * 16);
-
-        this.novoJogo.casa.time = this.times[indexCasa];
-        this.novoJogo.casa.gols = 0;
-        this.novoJogo.fora.time = this.times[indexFora];
-        this.novoJogo.fora.gols = 0;
-
+        },
+        view: 'tabela'
     },
     methods: {
         fimJogo(){
             let timeAdversario = this.novoJogo.fora.time;
             let gols = +this.novoJogo.casa.gols;
             let golsAdversario = +this.novoJogo.fora.gols;
-
             this.novoJogo.casa.time.fimJogo(timeAdversario, gols, golsAdversario);
+            this.showView('tabela');
+        },
+        createNovoJogo(){
+            let indexCasa = Math.floor(Math.random() * 16),
+                indexFora = Math.floor(Math.random() * 16);
 
+            this.novoJogo.casa.time = this.times[indexCasa];
+            this.novoJogo.casa.gols = 0;
+            this.novoJogo.fora.time = this.times[indexFora];
+            this.novoJogo.fora.gols = 0;
+            this.showView('novojogo')
+        },
+        showView(view){
+            this.view = view;
         }
     },
     filters: {
