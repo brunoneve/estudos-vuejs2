@@ -40,7 +40,7 @@ let myVue = new Vue({
                 time:null,
                 gols:0
             }
-        },
+        }
     },
     created(){
         let indexCasa = Math.floor(Math.random() * 16),
@@ -55,4 +55,3 @@ let myVue = new Vue({
 
 
 });
-console.log(myVue);
