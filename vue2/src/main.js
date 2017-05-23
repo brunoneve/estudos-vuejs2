@@ -61,6 +61,11 @@ let myVue = new Vue({
             this.novoJogo.casa.time.fimJogo(timeAdversario, gols, golsAdversario);
 
         }
+    },
+    filters: {
+        saldo(time){
+            return time.gm - time.gs;
+        }
     }
 
 
