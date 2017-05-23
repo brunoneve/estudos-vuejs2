@@ -14,11 +14,13 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th v-for="coluna in colunas">{{coluna | ucwords}}</th>
+                        <th v-for="coluna in colunas">
+                            <a href="#" @click.prevent="sortBy(coluna)">{{coluna | ucwords}}</a>
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="time in times">
+                    <tr v-for="time in timesFiltered">
                         <td>
                             <img :src="time.escudo" style="width:30px;height:30px">
                             <strong>{{time.nome}}</strong>
