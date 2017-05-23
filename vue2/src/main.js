@@ -7,6 +7,7 @@ require('bootstrap');
 let myVue = new Vue({
     el: '#app',
     data: {
+        colunas: ['nome','pontos','gm','gs','saldo'],
         times: [
             new Time('Palmeiras', require('./assets/palmeiras_60x60.png')),
             new Time('Santos', require('./assets/santos_60x60.png')),
@@ -65,7 +66,10 @@ let myVue = new Vue({
     filters: {
         saldo(time){
             return time.gm - time.gs;
-        }
+        },
+        ucwords(value){
+            return value.charAt(0).toUpperCase() + value.slice(1);
+        },
     }
 
 

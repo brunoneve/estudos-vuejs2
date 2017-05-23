@@ -12,11 +12,7 @@
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Time</th>
-                        <th>Pontos</th>
-                        <th>GM</th>
-                        <th>GS</th>
-                        <th>Saldo</th>
+                        <th v-for="coluna in colunas">{{coluna | ucwords}}</th>
                     </tr>
                 </thead>
                 <tbody>
