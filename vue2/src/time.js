@@ -26,7 +26,7 @@ export class Time {
                 timeAdversario.updateInfo(0, golsAdversario, gols);
             } else {
                 this.updateInfo(0, gols, golsAdversario);
-                timeAdversario.updateInfo(0, golsAdversario, gols);
+                timeAdversario.updateInfo(3, golsAdversario, gols);
             }
         }
     }

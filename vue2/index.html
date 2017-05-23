@@ -11,6 +11,18 @@
             <a class="btn btn-primary" @click="createNovoJogo">Novo Jogo</a>
             <br><br>
             <div v-if="view === 'tabela'">
+                <div class="row">
+                    <div class="col-md-3 pull-right">
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Pesquisar..." v-model="filter">
+                        </div>
+
+                    </div>
+                </div>
+                <br>
                 <table class="table table-striped table-bordered">
                     <thead>
                     <tr>

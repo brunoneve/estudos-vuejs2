@@ -47,7 +47,8 @@ let myVue = new Vue({
                 gols:0
             }
         },
-        view: 'tabela'
+        view: 'tabela',
+        filter: ''
     },
     methods: {
         fimJogo(){
@@ -77,10 +78,12 @@ let myVue = new Vue({
     },
     computed: {
         timesFiltered(){
-            return _.orderBy(this.times, this.order.keys, this.order.sort);
+            let colecao = _.orderBy(this.times, this.order.keys, this.order.sort);
 
+            return _.filter(colecao , item => {
+                return item.nome.indexOf(this.filter) >= 0;
+            })
         }
-
     },
     filters: {
         saldo(time){
